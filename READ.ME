@@ -1,1 +1,15 @@
-'This projects consists in doing ...'
+Projet : Amélioration du package python-binance
+
+
+#Consignes
+
+Nous avons vu en cours comment utiliser les fonctions de bases du package python-binance pour récupérer des données. Cependant, celui-ci présente certaines limites. L’objectif de ce projet va être de proposer une nouvelle classe permettant des fonctionnalités supplémentaires. Votre classe prendra les mêmes arguments d’initialisation que la classe Client du package (clé api publique et privé), et devra permettre les fonctionnalitées suivantes:
+- Récupération de bar pour n’importe quelle fréquence (18 secondes, 22h18min par exemple)
+-Pour ce faire récupérer les trades agrégés (voir doc de python-binance) puis agrégé les en fonction de la fréquence demandé
+- Attention, les trades représentant beaucoup de données, il faudra découper la requête en plusieurs sous requêtes (par bloc de 1 heure par exemple).
+- Pensez à gérer le cas où l’API renvoie une erreur (trop de requête par exemple) en utilisant try et except
+- Récupération de bar avec un symbol OU une liste de symbol
+- Récupération des bars des futures et du spot avec la même fonction, en spécifiant uniquement un paramètre (contrairement au package python-binance qui présente deux fonctions différentes
+
+L’ajout d’autres fonctionnalités selon vos idées, si elles ont du sens, apportera des points bonus.
+Votre code devra se présenter sous la forme d’une classe dans un fichier .py, et d’un fichier d’exemple d’utilisation, qui importe la classe et utilise ses fonctions. Vous pouvez séparer le projet en autant de fichiers python que vous le souhaitez.
